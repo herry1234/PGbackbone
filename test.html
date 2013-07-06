@@ -1,0 +1,32 @@
+<html>
+   <head>
+   <script src="lib/jquery-1.8.2.min.js"></script>
+      <script>
+      $(document).ready(function($){
+         test_event();
+      });
+      function test_event(){
+         var d1 = document.getElementById("div1");
+         var d2 = document.getElementById("div2");
+         d1.addEventListener("click", function(e) {
+            alert("div1 " + e.currentTarget.tagName+ " was clicked bubbles property " + e.bubbles);
+         },false);
+         d2.addEventListener("click", function(e) {
+            alert("div2 " + e.currentTarget.tagName + " was clicked and bubbles property " + e.bubbles);
+            e.stopPropagation();
+         },false);
+      }
+   </script>
+   </head>
+
+   <body>
+      
+      <div id="div1">
+         click here to trigger event on div1
+         <div id="div2">
+         click here to trigger event on div2
+         </div>
+      </div>
+
+   </body>
+</html>

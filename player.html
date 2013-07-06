@@ -1,0 +1,34 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+
+      <title>Wedding Picture Video</title>
+      <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+      <script src="http://vjs.zencdn.net/c/video.js"></script>
+
+   </head>
+   <body>
+      <div class="header">
+      </div>
+      <div>
+      PC/MAC 
+     </div>
+      <video id="my_video_2" class="video-js vjs-default-skin" controls
+      preload="auto" width="400" height="300" poster="my_video_poster.png"
+      data-setup="{}">
+      <source src="video/herryxiao_low.mp4" type='video/mp4'>
+      </source>
+      </video>
+      <div>
+      IOS/MAC : HLS Streaming
+     </div>
+      <video id="my_video_1" class="video-js vjs-default-skin" controls
+      preload="auto" width="400" height="300" poster="my_video_poster.png"
+      data-setup="{}">
+      <source src="http://171.71.46.197:1935/vod/mp4:herryxiao_low.mp4/playlist.m3u8" type='video/mp4'>
+      </source>
+      </video>
+
+   </body>
+
+</html>
